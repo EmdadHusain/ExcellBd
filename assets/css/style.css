@@ -68,12 +68,12 @@ textarea {
 /* Main menu #dropdown #mm*/
 
 header {
-  padding: 10px 0;
+  padding: 10px 0 12px;
 }
 
 .search_area {
   /*! flex: 1; */
-  max-width: 700px;
+  max-width: 600px;
   /*! padding: 10px; */
   /* border: 1px solid #d8d8d8; */
   display: flex;
@@ -83,16 +83,24 @@ header {
   box-shadow: -1px 1px 13px #6e464659;
   border-radius: 2px;
 }
-.search_area i {
+.search_area .search_icon {
   display: inline-block;
-  padding: 15px;
+  padding: 13.5px 11px;
   background: #2c63af;
   color: #fff;
   border: 1px solid #2c63af;
-  border-radius: 0px 2px 2px 0;
+  border-radius: 0px 3px 3px 0;
+}
+
+.search_area .close_icon {
+  /* display: none; */
+  padding: 15px 18px 15px 0px;
+  cursor: pointer;
+  color: #757575;
+  font-size: 17px;
 }
 .search_area input {
-  padding: 0 13px;
+  padding: 10px 10px 10px 19px;
   flex: 1;
   /*! border: 1px solid #d8d8d8; */
 }

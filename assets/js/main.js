@@ -1,5 +1,5 @@
 
-      $(document).ready(function ($) {
+      jQuery(document).ready(function ($) {
         // Function to clear all inline styles and reset to CSS defaults
         function removeInlineStyle() {
           const screenWidth = $(window).width();
@@ -174,6 +174,21 @@
             // If main menu is hidden, open it
             $mainMenu.slideDown();
           }
+        });
+        //search Icon Toggle
+        $header_search_input = $('.search_area #header_search_input');
+
+         $header_search_input.on("input", function () {
+          if ($(this).val().length > 0) {
+            $(".search_area .close_icon").removeClass('!hidden').addClass("inline-block");
+          } else {
+            $(".search_area .close_icon").removeClass('inline-block').addClass("!hidden");
+          }
+        });
+        $(".search_area .close_icon").on("click", function () {
+          $(this).removeClass('inline-block').addClass("!hidden");
+          $header_search_input.val("").focus();
+          
         });
       });
     
