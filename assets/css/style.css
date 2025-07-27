@@ -62,6 +62,22 @@ textarea {
   /* background: #fafafa; */
   resize: none;
 }
+.scroll_icon {
+  display: none;
+
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background: #13518a85;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
 /*=======================
     Common Css Ends #cmend
     =========================*/
@@ -69,6 +85,9 @@ textarea {
 
 header {
   padding: 10px 0 12px;
+}
+.top_header {
+  box-shadow: 0px -10px 18px 0px rgba(0, 0, 0, 0.3);
 }
 
 .search_area {
@@ -111,10 +130,20 @@ header {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .mega_box {
   display: none;
 }
+.megamenu ul {
+  position: static !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin-top: 0 !important;
+  border-top: 0 !important;
+  background: unset !important;
+  width: unset;
+  padding: 0 !important;
+}
+
 .main_menu ul li a i {
   display: inline-block;
 }
@@ -125,6 +154,8 @@ header {
 .mobile {
   display: none;
 }
+/* #nav */
+
 .main_menu ul li {
   padding: 10px;
   position: relative;
@@ -141,7 +172,7 @@ header {
   flex-direction: column;
   background: #fff;
   box-sizing: border-box;
-  border-top: 3px solid #2ea3f2;
+  border-top: 4px solid #2ea3f2;
   padding: 15px 0;
   visibility: hidden;
   opacity: 0;
@@ -199,6 +230,42 @@ header {
   display: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    transition: 0.8s;
+  }
+  .megamenu {
+    position: fixed;
+    /*! top: 175px; */
+    left: 8%;
+    width: 80%;
+    border-top: 3px solid #2ea3f2;
+    background: #fff;
+    z-index: 100000;
+    padding: 30px 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    margin-top: 50px;
+    pointer-events: none;
+  }
+  .main_menu .mega_li:hover .megamenu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+    pointer-events: auto;
+  }
+}
+@media screen and (max-width: 1395px) {
+  .megamenu {
+    left: 5%;
+  }
+}
 /* @media screen and (min-width: 640px) { */
 @media screen and (max-width: 1357px) {
   .main_menu ul ul {
@@ -266,9 +333,7 @@ header {
   .main_menu ul li a .desk-icon {
     display: none;
   }
-  .main_menu > ul > li > a > i.mobile-icon {
-    /*! font-size: 10px; */
-  }
+
   .main_menu ul ul {
     position: static;
     width: 90%;
@@ -282,6 +347,10 @@ header {
     padding: 0;
     margin-right: unset;
   }
+  .main_menu ul li.mega_li ul {
+    display: block;
+  }
+  
 
   .main_menu ul ul ul {
     margin-left: auto;
@@ -302,6 +371,7 @@ header {
     margin-left: 0;
     margin: -10px 0;
   }
+
   /* hover */
 
   .main_menu ul li:hover > a {

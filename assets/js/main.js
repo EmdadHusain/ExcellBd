@@ -1,13 +1,39 @@
+jQuery(document).ready(function ($) {
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 195 ){
+            $('nav').addClass('sticky');
+            $('.scroll_icon').css("display","block");
+          }else{
+            $('nav').removeClass('sticky');
+            $('.scroll_icon').css("display","none");
+          }         
+        });
 
-      jQuery(document).ready(function ($) {
+        $('.scroll_icon').click(function(){
+          $('html,body').animate({
+            scrollTop:0
+          })
+        });
+        // function toggleIcon($icon, plus = true){
+        //   if(plus){
+        //     if($icon.hasClass('fa-plus')){
+        //       $icon.removeClass('fa-plus').addClass('fa-minus');
+        //     }
+        //     }else{
+        //       if($icon.hasClass('fa-minus')){
+        //         $icon.removeClass('fa-minus').addClass('fa-plus');
+        //       }
+        //     }
+        //   }
+        
         // Function to clear all inline styles and reset to CSS defaults
         function removeInlineStyle() {
           const screenWidth = $(window).width();
 
           if (screenWidth > 1023) {
             // Desktop: Remove all inline styles and reset icons
-            $(".main_menu").removeAttr("style");
-            $(".main_menu ul ul").removeAttr("style");
+            $(".main_menu,.main_menu ul ul,.megamenu").removeAttr("style");
+            // $("").removeAttr("style");
 
             // Reset all mobile icons to plus
             $(".mobile-icon").removeClass("fa-minus").addClass("fa-plus");
@@ -89,7 +115,13 @@
         // Function to close all descendant submenus and reset icons
         function closeAllDescendants($parentElement) {
           // Find all descendant ul elements that are submenus (not the main menu ul)
-          $parentElement.find("li ul").slideUp();
+          $parentElement.find("li ul, .megamenu").not('.megamenu ul, .megamenu li ul').slideUp(); 
+                    // $parentElement.find('ul li.mega_li ul').slideDown(); 
+
+          // Also close any megamenus within the parent element // wrong
+          // $(".megamenu").find('ul').slideUp(); // 
+          
+
 
           // Reset all mobile icons in descendants from minus to plus
           $parentElement.find("li .mobile-icon").each(function () {
@@ -114,27 +146,31 @@
 
               const $this = $(this);
               const $submenu = $this.closest("a").next("ul");
+              const $megamenu = $this.closest('a').next('.megamenu');
               const $parentLi = $this.closest("li");
-
-              if ($submenu.length) {
+              //  $megamenu.slideToggle();
+               if($megamenu.length){
+                if($megamenu.is(":visible")){
+                  $megamenu.slideUp(800);
+                  
+                }else{
+                  // $megamenu.slideDown();  
+                  $megamenu.slideDown(800);
+                }
+                $this.toggleClass('fa-plus fa-minus');
+               
+               }
+               else if ($submenu.length ) {
+               
                 if ($submenu.is(":visible")) {
                   // If submenu is visible, close it and all its descendants
                   closeAllDescendants($parentLi);
-                  $submenu.slideUp();
-
-                  // Change icon from minus to plus
-                  if ($this.hasClass("fa-minus")) {
-                    $this.removeClass("fa-minus").addClass("fa-plus");
-                  }
-                } else {
+                  $submenu.slideUp();                  
+                }else {
                   // If submenu is hidden, open it
-                  $submenu.slideDown();
-
-                  // Change icon from plus to minus
-                  if ($this.hasClass("fa-plus")) {
-                    $this.removeClass("fa-plus").addClass("fa-minus");
-                  }
+                  $submenu.slideDown();                  
                 }
+                $this.toggleClass('fa-plus fa-minus');
               }
             });
           }
@@ -175,6 +211,7 @@
             $mainMenu.slideDown();
           }
         });
+
         //search Icon Toggle
         $header_search_input = $('.search_area #header_search_input');
 

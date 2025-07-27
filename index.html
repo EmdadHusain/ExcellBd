@@ -35,6 +35,7 @@
   </div>
 
   <body>
+    <button class="scroll_icon"><i class="fa-solid fa-arrow-up"></i></button>
     <div class="top_header mb-2 py-2.5">
       <div class="containerC align-center flex justify-between">
         <div class="phone_number_wrapper hidden align-top lg:flex">
@@ -103,7 +104,9 @@
     <header class="hidden lg:block">
       <div class="containerC flex justify-between items-center">
         <div class="logo">
-          <img class="max-w-[103px]" src="assets/img/logo.jpg" alt="logo" />
+          <a href="index.html"
+            ><img class="max-w-[103px]" src="assets/img/logo.jpg" alt="logo"
+          /></a>
         </div>
         <div class="search_area">
           <input type="text" id="header_search_input" placeholder="Search" />
@@ -129,18 +132,71 @@
         </div>
         <div class="main_menu">
           <ul>
-            <li class="has-submenu">
+            <li class="has-submenu mega_li">
               <a href="#"
                 >Brands <i class="desk-icon fa-solid fa-angle-down"></i
                 ><i class="mobile-icon fa-solid fa-plus"></i
               ></a>
 
-              <ul>
-                <li><a href="#">Brand 1</a></li>
-                <li><a href="#">Brand 2</a></li>
-                <li><a href="#">Brand 3</a></li>
-                <li><a href="#">Brand 4</a></li>
-              </ul>
+              <div class="megamenu hidden lg:block">
+                <div class="row lg:flex">
+                  <!-- Column 1 -->
+                  <div class="lg:w-4/12">
+                    <ul>
+                      <li><a href="">TP-Link</a></li>
+                      <li><a href="">Grandstream</a></li>
+                      <li><a href="">DIGITALX</a></li>
+                      <li><a href="">CommScope</a></li>
+                      <li><a href="">Juniper</a></li>
+                      <li><a href="">Paramount</a></li>
+                      <li><a href="">X-Lab</a></li>
+                      <li><a href="">METZ</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 2 -->
+                  <div class="lg:w-4/12">
+                    <ul>
+                      <li><a href="">Hikvision</a></li>
+                      <li><a href="">MICROPACK</a></li>
+                      <li><a href="">AVer</a></li>
+                      <li><a href="">Addlink</a></li>
+                      <li><a href="">Kyocera</a></li>
+                      <li><a href="">PHILIPS</a></li>
+                      <li><a href="">XP-Pen</a></li>
+                      <li><a href="">MARSRIVA</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 3 -->
+                  <div class="lg:w-4/12">
+                    <ul>
+                      <li><a href="">Optoma</a></li>
+                      <li><a href="">EPSON</a></li>
+                      <li><a href="">C-Data</a></li>
+                      <li><a href="">Ezviz</a></li>
+                      <li><a href="">MERCUSYS</a></li>
+                      <li><a href="">Rosenberger</a></li>
+                      <li><a href="">Huawei eKit</a></li>
+                      <li><a href="">Demo eKit</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Column 4 -->
+                  <div class="lg:w-4/12">
+                    <ul>
+                      <li><a href="">Logitech</a></li>
+                      <li><a href="">Pantum</a></li>
+                      <li><a href="">Lenovo</a></li>
+                      <li><a href="">Hi-Watch</a></li>
+                      <li><a href="">Mikrotik</a></li>
+                      <li><a href="">SOPHOS</a></li>
+                      <li><a href="">Cisco</a></li>
+                      <li><a href="">Hi-Watch</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
 
             <li class="has-submenu">
@@ -1023,6 +1079,7 @@
 
     <!-- <i class="fa-solid fa-xmark"></i>
    <i class="fa-solid fa-home"></i> -->
+    <div style="margin-bottom: 5000px"></div>
     <!-- jQuery -->
     <script src="assets/js/jQuery.min.js"></script>
     <script>
