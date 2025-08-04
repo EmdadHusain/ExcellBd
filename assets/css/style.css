@@ -13,7 +13,7 @@ Common Css Starts
 
 body {
   /* color: #1f1f1f; */
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   /* line-height: 1.5em; */
 }
 
@@ -92,23 +92,25 @@ header {
 
 .search_area {
   /*! flex: 1; */
-  max-width: 600px;
+  /*! max-width: 600px; */
   /*! padding: 10px; */
   /* border: 1px solid #d8d8d8; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
+  /*! display: flex; */
+  /*! justify-content: space-between; */
+  /*! align-items: center; */
+  /*! width: 50%; */
   box-shadow: -1px 1px 13px #6e464659;
   border-radius: 2px;
 }
-.search_area .search_icon {
+.search_area .search_icon,
+.search_area .nav_search_close_icon {
   display: inline-block;
-  padding: 13.5px 11px;
+  /*! padding: 13.5px 11px; */
   background: #2c63af;
   color: #fff;
   border: 1px solid #2c63af;
-  border-radius: 0px 3px 3px 0;
+  /*! border-radius: 0px 3px 3px 0; */
+  cursor: pointer;
 }
 
 .search_area .close_icon {
@@ -118,10 +120,15 @@ header {
   color: #757575;
   font-size: 17px;
 }
+
+.nav_search_area {
+  min-width: 0;
+}
 .search_area input {
-  padding: 10px 10px 10px 19px;
+  /*! padding: 10px 10px 10px 19px; */
   flex: 1;
   /*! border: 1px solid #d8d8d8; */
+  min-width: 0;
 }
 
 .main_menu ul {
@@ -203,7 +210,10 @@ header {
   transition: 0.4s;
 }
 .main_menu ul ul li:hover ul {
-  top: -17.5px;
+  top: -19px;
+}
+.main_menu ul ul ul li:hover ul {
+  top: -18px;
 }
 
 .main_menu ul ul ul li:hover > ul {
@@ -229,16 +239,16 @@ header {
 .main_menu ul li i.mobile-icon {
   display: none;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  transition: 0.8s;
+}
 
 @media screen and (min-width: 1024px) {
-  .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99999;
-    transition: 0.8s;
-  }
   .megamenu {
     position: fixed;
     /*! top: 175px; */
@@ -283,7 +293,7 @@ header {
 @media screen and (max-width: 1023px) {
   #menuBtn {
     cursor: pointer;
-    padding: 3px 12px;
+    /*! padding: 8px 12px; */
   }
 
   nav .containerC {
@@ -291,10 +301,10 @@ header {
   }
   .main_menu {
     position: absolute;
-    width: 100%;
+    /*! width: 100%; */
     background: #2c63af;
     overflow: hidden;
-    top: 36px;
+    top: 44PX;
     display: none;
     padding: 40px 0 50px;
   }
@@ -350,7 +360,6 @@ header {
   .main_menu ul li.mega_li ul {
     display: block;
   }
-  
 
   .main_menu ul ul ul {
     margin-left: auto;

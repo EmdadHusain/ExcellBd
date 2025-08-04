@@ -1,2 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 /* Hide/show mobile panel */
+@theme {
+  --breakpoint-xsm: 425px;
+  --breakpoint-bsm: 576px;
+}

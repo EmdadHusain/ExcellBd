@@ -108,10 +108,19 @@
             ><img class="max-w-[103px]" src="assets/img/logo.jpg" alt="logo"
           /></a>
         </div>
-        <div class="search_area">
-          <input type="text" id="header_search_input" placeholder="Search" />
+        <div
+          class="search_area w-[50%] max-w-[600px] flex justify-between items-center"
+        >
+          <input
+            type="text"
+            id="header_search_input"
+            placeholder="Search Here"
+            class="py-[10px] pl-[19px] pr-[10px]"
+          />
           <i class="close_icon !hidden fa-solid fa-xmark"></i>
-          <i class="search_icon fa-solid fa-search"></i>
+          <i
+            class="search_icon fa-solid fa-search rounded-r-[3px] py-[13.5px] px-[11px]"
+          ></i>
         </div>
         <img
           class="right_header_logo max-w-[130px]"
@@ -121,8 +130,10 @@
         <!-- <img src="assets/img/logo.svg" alt="logo" class="block w-[100px] h-auto"> -->
       </div>
     </header>
-    <nav class="bg-[#2C63AF] py-1 lg:bg-[#FEC300]">
-      <div class="containerC flex items-center justify-between">
+    <nav class="bg-[#2C63AF] lg:bg-[#FEC300]">
+      <div
+        class="containerC flex items-center justify-between max-xsm:!w-[97%]"
+      >
         <div class="mobile-logo lg:hidden">
           <img
             class="max-w-[74px]"
@@ -130,7 +141,8 @@
             alt=""
           />
         </div>
-        <div class="main_menu">
+
+        <div class="main_menu w-[96%] xsm:w-full max-xsm:left-1/2 max-xsm:-translate-x-1/2">
           <ul>
             <li class="has-submenu mega_li">
               <a href="#"
@@ -1061,8 +1073,32 @@
             </li>
           </ul>
         </div>
-        <div class="menuAndSearch_wrapper lg:hidden">
-          <button id="menuBtn" class="block">
+        <div
+          class="search_area nav_search_area flex justify-between items-center hidden bg-white w-[100%] sm:w-[75%]"
+        >
+          <input
+            type="text"
+            id="header_search_input"
+            placeholder="Search Here"
+            class="py-[10px] px-[5px] xsm:pl-[19px] xsm:pr-[10px]""
+          />
+          <i class="close_icon !hidden fa-solid fa-xmark"></i>
+          <i
+            class="search_icon fa-solid fa-search pl-[5px] pr-[2.5px] sm:px-[11px] py-[13.5px]"
+          ></i>
+          <i
+            class="nav_search_close_icon fa-solid fa-close bg-[#2c63af] text-xl pl-[2.5px] pr-[2.5px] sm:px-[11.5px] py-[11.5px]"
+          ></i>
+        </div>
+
+        <div
+          class="menuAndSearch_wrapper lg:hidden flex text-white text-xl items-center gap-3"
+        >
+          <i class="nav_search_icon fa-solid fa-magnifying-glass p-3"></i>
+          <button
+            id="menuBtn"
+            class="block pl-[2.5px] sm:pl-[12px] py-[8px]"
+          >
             <i class="fa-solid fa-bars text-xl text-white"></i>
           </button>
 
@@ -1086,10 +1122,10 @@
       $(document).ready(function () {
         // Optional debug script to show screen width
         function updateScreenSize() {
-          document.getElementById("screen-size").textContent =
-            window.innerWidth + "px";
+          document.getElementById('screen-size').textContent =
+            window.innerWidth + 'px';
         }
-        window.addEventListener("resize", updateScreenSize);
+        window.addEventListener('resize', updateScreenSize);
         updateScreenSize();
       });
     </script>
