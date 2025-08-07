@@ -303,10 +303,14 @@ header {
     position: absolute;
     /*! width: 100%; */
     background: #2c63af;
-    overflow: hidden;
+    /*! overflow: hidden; */
     top: 44PX;
     display: none;
     padding: 40px 0 50px;
+    overflow-y: auto;
+    /*! max-height: calc(100vh-100px); */
+    max-height: calc(100vh - 100px);
+    z-index: 999;
   }
   .main_menu ul {
     display: flex;

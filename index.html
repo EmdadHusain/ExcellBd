@@ -8,12 +8,12 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
     <link rel="stylesheet" href="assets/css/all.min.css" />
     <!-- swiper.min.css -->
-    <link rel="stylesheet" href="assets/css/siper.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <!-- tailwind Cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!-- style.css -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css" /> -->
     <!-- tailOutput.css -->
     <link rel="stylesheet" href="src/output.css" />
   </head>
@@ -132,7 +132,7 @@
     </header>
     <nav class="bg-[#2C63AF] lg:bg-[#FEC300]">
       <div
-        class="containerC flex items-center justify-between max-xsm:!w-[97%]"
+        class="containerC flex items-center justify-between max-xsm:!w-[96%]"
       >
         <div class="mobile-logo lg:hidden">
           <img
@@ -142,7 +142,9 @@
           />
         </div>
 
-        <div class="main_menu w-[96%] xsm:w-full max-xsm:left-1/2 max-xsm:-translate-x-1/2">
+        <div
+          class="main_menu w-[96%] xsm:w-full max-xsm:left-1/2 max-xsm:-translate-x-1/2"
+        >
           <ul>
             <li class="has-submenu mega_li">
               <a href="#"
@@ -1080,7 +1082,7 @@
             type="text"
             id="header_search_input"
             placeholder="Search Here"
-            class="py-[10px] px-[5px] xsm:pl-[19px] xsm:pr-[10px]""
+            class="py-[10px] px-[5px] xsm:pl-[19px] xsm:pr-[10px]"
           />
           <i class="close_icon !hidden fa-solid fa-xmark"></i>
           <i
@@ -1097,7 +1099,7 @@
           <i class="nav_search_icon fa-solid fa-magnifying-glass p-3"></i>
           <button
             id="menuBtn"
-            class="block pl-[2.5px] sm:pl-[12px] py-[8px]"
+            class="block pl-[2.5px] pr-[5px] sm:pl-[12px] py-[8px]"
           >
             <i class="fa-solid fa-bars text-xl text-white"></i>
           </button>
@@ -1109,9 +1111,39 @@
         </div>
       </div>
     </nav>
-    <!-- <div class="bg-red-500 text-white p-4 lg:bg-blue-500">
-      Test - Should be red on mobile, blue on desktop
-    </div> -->
+    <div class="hero_carousel  py-[10px] md:py-[20px]">
+      <div class="containerC ">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <img
+              class="swiper-slide"
+              src="assets/img/Customer-Support-Point-ExcelService-Web-Banner.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="assets/img/Best-Speaker-and-sound-system-available-in-bangladesh.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="assets/img/Best-router-networking-solution-distributor-of-bangladesh.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="assets/img/best-unified-communication-solution-provider-in-bangladesh.jpg"
+              alt=""
+            />
+            <img
+              class="swiper-slide"
+              src="assets/img/Best-Security-Surveilance-solution-Provider-in-bangladesh.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- <i class="fa-solid fa-xmark"></i>
    <i class="fa-solid fa-home"></i> -->
@@ -1132,6 +1164,7 @@
 
     <!-- swiper-bundle.min.js -->
     <script src="assets/js/swiper-bundle.min.js"></script>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -268,4 +268,33 @@ jQuery(document).ready(function ($) {
       manageNavSearchIcons();
     }, 100);
   });
+
+  //hero Carousel
+  let swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    grabCursor: true,
+    autoplay: {
+      delay: 5500,
+      disableOnInteraction: false,
+    },
+    effect: 'fade',
+    speed: 2500, // Fade animation duration
+    fadeEffect: {
+      crossFade: true, // Optional: makes fade smooth
+    },
+
+    // effect: 'creative',
+    // creativeEffect: {
+    //   prev: {
+    //     opacity: 0,
+    //     translate: [0, 0, -400],
+    //     // translate: ['-100%', 0, 0], // Move previous slide to left
+    //   },
+    //   next: {
+    //     opacity: 0,
+    //     translate: ['100%', 0, 0],
+    //     // translate: ['0%'`, 0, 0], // Bring next slide from left
+    //   },
+    // },
+  });
 });
