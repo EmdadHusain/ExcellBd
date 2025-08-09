@@ -218,6 +218,12 @@
       max-width: 96rem;
     }
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mr-\[18px\] {
     margin-right: 18px;
   }
@@ -254,17 +260,8 @@
   .h-auto {
     height: auto;
   }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
   .w-3\/12 {
     width: calc(3/12 * 100%);
-  }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
-  }
-  .w-6\/12 {
-    width: calc(6/12 * 100%);
   }
   .w-\[22px\] {
     width: 22px;
@@ -299,20 +296,14 @@
   .max-w-\[600px\] {
     max-width: 600px;
   }
-  .basis-\[calc\(50\%-8px\)\] {
-    flex-basis: calc(50% - 8px);
-  }
-  .basis-\[calc\(50\%-16px\)\] {
-    flex-basis: calc(50% - 16px);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -329,14 +320,14 @@
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
-  .gap-y-2 {
-    row-gap: calc(var(--spacing) * 2);
+  .gap-x-1 {
+    column-gap: calc(var(--spacing) * 1);
   }
   .gap-y-2\.5 {
     row-gap: calc(var(--spacing) * 2.5);
+  }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
   }
   .overflow-hidden {
     overflow: hidden;
@@ -396,26 +387,14 @@
     --tw-gradient-to: #FCAF45;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
-  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
-  .p-\[8px\] {
-    padding: 8px;
-  }
-  .p-\[10px\] {
-    padding: 10px;
-  }
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
-  }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
   }
   .px-\[5px\] {
     padding-inline: 5px;
@@ -423,11 +402,14 @@
   .px-\[11px\] {
     padding-inline: 11px;
   }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
   }
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
   }
   .py-\[8px\] {
     padding-block: 8px;
@@ -456,9 +438,6 @@
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
-  .pb-5 {
-    padding-bottom: calc(var(--spacing) * 5);
-  }
   .pl-\[2\.5px\] {
     padding-left: 2.5px;
   }
@@ -477,10 +456,6 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -521,9 +496,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -573,6 +545,11 @@
       width: 100%;
     }
   }
+  .xsm\:grid-cols-4 {
+    @media (width >= 425px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
   .xsm\:gap-4 {
     @media (width >= 425px) {
       gap: calc(var(--spacing) * 4);
@@ -581,11 +558,6 @@
   .xsm\:gap-y-4 {
     @media (width >= 425px) {
       row-gap: calc(var(--spacing) * 4);
-    }
-  }
-  .xsm\:gap-y-7 {
-    @media (width >= 425px) {
-      row-gap: calc(var(--spacing) * 7);
     }
   }
   .xsm\:p-2\.5 {
@@ -609,6 +581,11 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
+  .bsm\:py-2\.5 {
+    @media (width >= 576px) {
+      padding-block: calc(var(--spacing) * 2.5);
+    }
+  }
   .sm\:w-\[31\%\] {
     @media (width >= 40rem) {
       width: 31%;
@@ -619,9 +596,14 @@
       width: 75%;
     }
   }
-  .sm\:gap-y-4 {
+  .sm\:grid-cols-4 {
     @media (width >= 40rem) {
-      row-gap: calc(var(--spacing) * 4);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .sm\:gap-x-1\.5 {
+    @media (width >= 40rem) {
+      column-gap: calc(var(--spacing) * 1.5);
     }
   }
   .sm\:px-\[11\.5px\] {
@@ -639,19 +621,19 @@
       padding-left: 12px;
     }
   }
-  .md\:w-4\/12 {
+  .md\:grid-cols-5 {
     @media (width >= 48rem) {
-      width: calc(4/12 * 100%);
+      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
-  .md\:gap-7 {
+  .md\:grid-cols-6 {
     @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 7);
+      grid-template-columns: repeat(6, minmax(0, 1fr));
     }
   }
-  .md\:gap-\[38px\] {
+  .md\:grid-cols-7 {
     @media (width >= 48rem) {
-      gap: 38px;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
     }
   }
   .md\:gap-y-7 {
@@ -659,14 +641,9 @@
       row-gap: calc(var(--spacing) * 7);
     }
   }
-  .md\:gap-y-77 {
+  .md\:py-5 {
     @media (width >= 48rem) {
-      row-gap: calc(var(--spacing) * 77);
-    }
-  }
-  .md\:py-\[20px\] {
-    @media (width >= 48rem) {
-      padding-block: 20px;
+      padding-block: calc(var(--spacing) * 5);
     }
   }
   .md\:pb-5 {
@@ -689,14 +666,19 @@
       display: none;
     }
   }
-  .lg\:w-2\/12 {
-    @media (width >= 64rem) {
-      width: calc(2/12 * 100%);
-    }
-  }
   .lg\:w-4\/12 {
     @media (width >= 64rem) {
       width: calc(4/12 * 100%);
+    }
+  }
+  .lg\:grid-cols-6 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-8 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
     }
   }
   .lg\:bg-\[\#FEC300\] {
@@ -704,24 +686,14 @@
       background-color: #FEC300;
     }
   }
-  .xl\:w-\[14\%\] {
-    @media (width >= 80rem) {
-      width: 14%;
-    }
-  }
   .xl\:w-\[14\.5\%\] {
     @media (width >= 80rem) {
       width: 14.5%;
     }
   }
-  .xl\:w-\[15\%\] {
+  .xl\:grid-cols-10 {
     @media (width >= 80rem) {
-      width: 15%;
-    }
-  }
-  .xl\:flex-nowrap {
-    @media (width >= 80rem) {
-      flex-wrap: nowrap;
+      grid-template-columns: repeat(10, minmax(0, 1fr));
     }
   }
 }
