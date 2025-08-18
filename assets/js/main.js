@@ -248,29 +248,8 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  // Initialize on page load
-  setTimeout(function () {
-    removeInlineStyle(); // Reset styles first
-    manageRightClassPrecise();
-    handleSpecificRightItems();
-    handleMobileEvents(); // Initialize mobile events
-    manageNavSearchIcons();
-  }, 100);
-
-  // Recalculate on window resize
-  $(window).on('resize', function () {
-    clearTimeout(window.resizeTimer);
-    window.resizeTimer = setTimeout(function () {
-      removeInlineStyle(); // Reset styles first, why it's and all functions r not working
-      manageRightClassPrecise();
-      handleSpecificRightItems();
-      handleMobileEvents(); // Re-bind mobile events on resize
-      manageNavSearchIcons();
-    }, 100);
-  });
-
   //hero Carousel
-  let swiper = new Swiper('.mySwiper', {
+  let hero_swiper = new Swiper('.hero_swiper', {
     slidesPerView: 1,
     grabCursor: true,
     autoplay: {
@@ -296,5 +275,73 @@ jQuery(document).ready(function ($) {
     //     // translate: ['0%'`, 0, 0], // Bring next slide from left
     //   },
     // },
+  });
+  function feature_swiper_activation() {
+    const screenWidth = $(window).width();
+    // Destroy existing swiper instance if it exists
+    if (window.featured_swiper instanceof Swiper) {
+      window.featured_swiper.destroy(true, true);
+      window.featured_swiper = null;
+    }
+
+    if (screenWidth < 768) {
+      $('.feature_sec .containerC').removeClass('swiper').addClass('swiper');
+      $('.feature_box_wrapper')
+        .removeClass('swiper-wrapper')
+        .addClass('swiper-wrapper');
+      $('.feature_box').removeClass('swiper-slide').addClass('swiper-slide');
+      $('.feature_pagination')
+        .removeClass('swiper-pagination')
+        .addClass('swiper-pagination');
+      window.featured_swiper = new Swiper('.feature_sec .containerC', {
+        slidesPerView: 1,
+        // spaceBetween: 20, // Space between slides
+        grabCursor: true,
+        // autoplay: {
+        //   delay: 500,
+        //   disableOnInteraction: false,
+        // },
+        loop: true, // Enable looping
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true, // Make pagination bullets clickable
+        },
+        effect: 'fade',
+        speed: 1500, // Fade animation duration
+        fadeEffect: {
+          crossFade: true, // Optional: makes fade smooth
+        },
+      });
+      // console.log('swiper activated :', screenWidth);
+    } else {
+      $('.feature_sec .containerC').removeClass('swiper');
+      $('.feature_box_wrapper').removeClass('swiper-wrapper');
+      $('.feature_box').removeClass('swiper-slide');
+      $('.feature_pagination').remove();
+      return;
+    }
+  }
+
+  // Initialize on page load
+  setTimeout(function () {
+    removeInlineStyle(); // Reset styles first
+    manageRightClassPrecise();
+    handleSpecificRightItems();
+    handleMobileEvents(); // Initialize mobile events
+    manageNavSearchIcons();
+    feature_swiper_activation();
+  }, 200);
+
+  // Recalculate on window resize
+  $(window).on('resize', function () {
+    clearTimeout(window.resizeTimer);
+    window.resizeTimer = setTimeout(function () {
+      removeInlineStyle(); // Reset styles first, why it's and all functions r not working
+      manageRightClassPrecise();
+      handleSpecificRightItems();
+      handleMobileEvents(); // Re-bind mobile events on resize
+      manageNavSearchIcons();
+      feature_swiper_activation();
+    }, 200);
   });
 });

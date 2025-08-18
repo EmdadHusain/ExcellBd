@@ -30,6 +30,17 @@ video {
   /* max-width: 100%; */
   height: auto;
 }
+.boxed_btn {
+  display: inline-block;
+  line-height: 1;
+  padding: 10px 12px;
+  background: #fec300;
+  /* border: 2px solid #fb414e; */
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  font-weight: 500;
+}
 
 a {
   text-decoration: none;
@@ -262,7 +273,18 @@ header {
   box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 30%);
   border-radius: 5px;
 }
+/* #featureSection */
+.feature_sec .swiper-slide {
+  height: auto;
+}
+.feature_sec .feature_box {
+  box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.3);
+  /* border-radius: 6px; */
+}
 
+
+
+/* #responsiveStarts */
 @media screen and (min-width: 1024px) {
   .megamenu {
     position: fixed;
