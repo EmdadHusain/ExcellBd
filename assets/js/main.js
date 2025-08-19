@@ -317,7 +317,7 @@ jQuery(document).ready(function ($) {
       $('.feature_sec .containerC').removeClass('swiper');
       $('.feature_box_wrapper').removeClass('swiper-wrapper');
       $('.feature_box').removeClass('swiper-slide');
-      $('.feature_pagination').remove();
+      $('.feature_pagination').empty();
       return;
     }
   }
