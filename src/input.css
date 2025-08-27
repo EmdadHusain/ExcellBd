@@ -1,6 +1,18 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 /* Hide/show mobile panel */
+
 @theme {
+  --breakpoint-360: 360px;
+  --breakpoint-375: 375px;
   --breakpoint-xsm: 425px;
+  --breakpoint-525: 525px;
   --breakpoint-bsm: 576px;
+  --breakpoint-sm: 630px; /* (custom) */
+  --breakpoint-md: 768px; /* md */
+  --breakpoint-919: 919px; /* custom */
+  --breakpoint-blg: 992px; /* custom */
+  --breakpoint-lg: 1024px; /* lg */
+  --breakpoint-bxl: 1200px; /* custom */
+  --breakpoint-xl: 1280px; /* xl */
+  --breakpoint-2xl: 1536px; /* 2xl */
 }

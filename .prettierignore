@@ -1,0 +1,22 @@
+# ✅ Minified files — should never be formatted
+**/*.min.js
+**/*.min.css
+# ✅ Dependency folders
+node_modules/
+
+# ✅ Build outputs — auto-generated files
+dist/
+build/
+out/
+public/
+.next/
+.vite/
+
+# ✅ Some assets that don't need formatting
+**/*.png
+**/*.jpg
+**/*.svg
+**/*.ico
+**/*.webp
+**/*.mp3
+**/*.mp4

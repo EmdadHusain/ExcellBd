@@ -256,6 +256,7 @@ jQuery(document).ready(function ($) {
       delay: 5500,
       disableOnInteraction: false,
     },
+    loop:true,
     effect: 'fade',
     speed: 2500, // Fade animation duration
     fadeEffect: {
