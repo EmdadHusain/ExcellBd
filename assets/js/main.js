@@ -34,8 +34,7 @@ jQuery(document).ready(function ($) {
 
     if (screenWidth > 1023) {
       // Desktop: Remove all inline styles and reset icons
-      $('.main_menu,.main_menu ul ul,.megamenu').removeAttr('style'); //why it's not working , and why many of setTimeout
-      // $("").removeAttr("style");
+      $('.main_menu,.main_menu ul ul,.megamenu').removeAttr('style'); 
 
       // Reset all mobile icons to plus
       $('.mobile-icon').removeClass('fa-minus').addClass('fa-plus');
@@ -202,11 +201,15 @@ jQuery(document).ready(function ($) {
   //search Icon Toggle
   $header_search_input = $('.search_area #header_search_input');
   $search_close_icon = $('.search_area .close_icon');
-
+  if ($header_search_input.val().length < 1 ){
+    $search_close_icon.addClass('hiddenC');
+  }else{
+    $search_close_icon.removeClass('hiddenC');
+  }
   $header_search_input.on('input', function () {
     $has_value = $(this).val().length > 0;
     // $search_close_icon.toggleClass('inline-block',$has_value);
-    $search_close_icon.toggleClass('!hidden', !$has_value);
+    $search_close_icon.toggleClass('hiddenC', !$has_value);
 
     // if ($(this).val().length > 0) {
     //   // $(".search_area .close_icon").removeClass('!hidden').addClass("inline-block");
@@ -218,7 +221,7 @@ jQuery(document).ready(function ($) {
   });
 
   $('.search_area .close_icon').on('click', function () {
-    $(this).addClass('!hidden');
+    $(this).addClass('hiddenC');
     // $('.nav_search_area').removeClass('hidden');
     $header_search_input.val('').focus();
   });

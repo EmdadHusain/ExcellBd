@@ -257,9 +257,6 @@
   .mr-\[18px\] {
     margin-right: 18px;
   }
-  .mb-1 {
-    margin-bottom: calc(var(--spacing) * 1);
-  }
   .mb-1\.5 {
     margin-bottom: calc(var(--spacing) * 1.5);
   }
@@ -332,20 +329,11 @@
   .h-auto {
     height: auto;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/5 {
     width: calc(1/5 * 100%);
   }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
   .w-3\/12 {
     width: calc(3/12 * 100%);
-  }
-  .w-4 {
-    width: calc(var(--spacing) * 4);
   }
   .w-4\/5 {
     width: calc(4/5 * 100%);
@@ -377,41 +365,23 @@
   .w-full {
     width: 100%;
   }
+  .\!max-w-\[104px\] {
+    max-width: 104px !important;
+  }
   .\!max-w-\[108px\] {
     max-width: 108px !important;
   }
   .\!max-w-\[150px\] {
     max-width: 150px !important;
   }
-  .max-w-\[10px\] {
-    max-width: 10px;
-  }
-  .max-w-\[13px\] {
-    max-width: 13px;
-  }
   .max-w-\[74px\] {
     max-width: 74px;
-  }
-  .max-w-\[103px\] {
-    max-width: 103px;
-  }
-  .max-w-\[108px\] {
-    max-width: 108px;
-  }
-  .max-w-\[130px\] {
-    max-width: 130px;
   }
   .max-w-\[131px\] {
     max-width: 131px;
   }
-  .max-w-\[150px\] {
-    max-width: 150px;
-  }
   .max-w-\[600px\] {
     max-width: 600px;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -469,9 +439,6 @@
   }
   .gap-x-\[5\.5\%\] {
     column-gap: 5.5%;
-  }
-  .gap-y-2 {
-    row-gap: calc(var(--spacing) * 2);
   }
   .gap-y-2\.5 {
     row-gap: calc(var(--spacing) * 2.5);
@@ -598,14 +565,8 @@
   .px-\[30px\] {
     padding-inline: 30px;
   }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
-  }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
   }
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
@@ -649,14 +610,8 @@
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
-  .pb-5 {
-    padding-bottom: calc(var(--spacing) * 5);
-  }
   .pb-5\.5 {
     padding-bottom: calc(var(--spacing) * 5.5);
-  }
-  .pb-9 {
-    padding-bottom: calc(var(--spacing) * 9);
   }
   .pl-\[2\.5px\] {
     padding-left: 2.5px;
@@ -757,9 +712,6 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -767,10 +719,6 @@
   .shadow-\[0_0__6px_rgb\(0\,0\,0\,0\.3\)\] {
     --tw-shadow: 0 0  6px var(--tw-shadow-color, rgb(0,0,0,0.3));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .blur {
     --tw-blur: blur(8px);
@@ -1022,24 +970,9 @@
       padding: calc(var(--spacing) * 3);
     }
   }
-  .md\:p-5 {
-    @media (width >= 768px) {
-      padding: calc(var(--spacing) * 5);
-    }
-  }
   .md\:py-5 {
     @media (width >= 768px) {
       padding-block: calc(var(--spacing) * 5);
-    }
-  }
-  .md\:py-8 {
-    @media (width >= 768px) {
-      padding-block: calc(var(--spacing) * 8);
-    }
-  }
-  .md\:pt-0 {
-    @media (width >= 768px) {
-      padding-top: calc(var(--spacing) * 0);
     }
   }
   .md\:pt-5 {
@@ -1277,31 +1210,6 @@
       background-color: #FEC300;
     }
   }
-  .lg\:p-8 {
-    @media (width >= 1024px) {
-      padding: calc(var(--spacing) * 8);
-    }
-  }
-  .lg\:py-1 {
-    @media (width >= 1024px) {
-      padding-block: calc(var(--spacing) * 1);
-    }
-  }
-  .lg\:py-8 {
-    @media (width >= 1024px) {
-      padding-block: calc(var(--spacing) * 8);
-    }
-  }
-  .lg\:pt-0 {
-    @media (width >= 1024px) {
-      padding-top: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:pt-8 {
-    @media (width >= 1024px) {
-      padding-top: calc(var(--spacing) * 8);
-    }
-  }
   .lg\:pb-8 {
     @media (width >= 1024px) {
       padding-bottom: calc(var(--spacing) * 8);
@@ -1468,11 +1376,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1594,7 +1497,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
